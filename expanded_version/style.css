@@ -1,0 +1,207 @@
+/* ✅ LIGHT MODE (Default) */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+h1 {
+  color: #333;
+}
+
+#theme-toggle {
+  padding: 8px 16px;
+  margin: 10px;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+  background: #555;
+}
+
+#search {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+/* ✅ Periodic Table */
+#periodic-table {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  gap: 5px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
+
+/* Add drag effect */
+.element {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: grab;
+  border: 1px solid #ddd;
+  background: lightgray;
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.element:hover {
+  transform: scale(1.2); /* Slightly enlarge */
+  background: #ffcc00; /* Change color */
+  color: black; /* Ensure text remains readable */
+  border-color: #ffa500; /* Add border effect */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* When element is being dragged */
+.element:active {
+  cursor: grabbing;
+}
+
+/* Highlight drop target */
+.drag-over {
+  border: 2px dashed #ffcc00;
+}
+
+
+.highlight {
+  background: #ff5733 !important;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+#element-details {
+  margin-top: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ✅ DARK MODE */
+.dark-mode {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark-mode #periodic-table {
+  background: #333;
+}
+
+.dark-mode .element {
+  background: #444;
+  color: white;
+  border-color: #666;
+}
+
+.dark-mode .element:hover {
+  background: #ffcc00;
+  color: black;
+}
+
+.dark-mode #element-details {
+  background: #444;
+}
+
+.dark-mode #theme-toggle {
+  background: white;
+  color: black;
+}
+
+.dark-mode #theme-toggle:hover {
+  background: #ddd;
+}
+
+
+.quiz-container {
+  margin-top: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+#quiz-options button {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: lightgray;
+  transition: background 0.3s ease-in-out;
+}
+
+#quiz-options button:hover {
+  background: #ffcc00;
+}
+
+#quiz-feedback {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.correct {
+  background: #28a745 !important; /* Green for correct answer */
+  color: white;
+}
+
+.incorrect {
+  background: #dc3545 !important; /* Red for incorrect answer */
+  color: white;
+}
+
+
+#voice-search {
+  padding: 8px 16px;
+  border: none;
+  background: #ff5733;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+#voice-search:hover {
+  background: #ff2e00;
+}
+
+#voice-status {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}

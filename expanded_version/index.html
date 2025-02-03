@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Periodic Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Interactive Periodic Table</h1>
+    <button id="theme-toggle">🌙 Dark Mode</button>
+    
+    <!-- Search Box -->
+    <input type="text" id="search" placeholder="Search by name, symbol, or atomic number..." onkeyup="searchElement()">
+    <button id="voice-search">🎤 Voice Search</button>
+    <p id="voice-status"></p>
+        
+    <!-- Filter Dropdown -->
+    <select id="state-filter" onchange="filterByState()">
+        <option value="all">All States</option>
+        <option value="solid">Solid</option>
+        <option value="liquid">Liquid</option>
+        <option value="gas">Gas</option>
+    </select>
+
+    <div id="periodic-table"></div>
+    <div id="element-details" class="hidden"></div>
+
+    <div class="quiz-container">
+      <h2>Periodic Table Quiz</h2>
+      <p id="quiz-question">Loading question...</p>
+      <div id="quiz-options"></div>
+      <button id="next-question" onclick="generateQuizQuestion()">Next Question</button>
+      <p id="quiz-feedback"></p>
+  </div>
+      
+
+    <div id="periodic-table" class="draggable-container"></div>
+    <button onclick="resetLayout()">Reset Layout</button>
+
+    </div>
+
+    <script src="elements.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
